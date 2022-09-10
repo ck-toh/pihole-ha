@@ -1,6 +1,20 @@
 version: '2'
 
 services:
+  #nextdns-proxy:
+  #  container_name: nextdns-proxy
+  #  image: "terafin/nextdns-proxy:latest"
+  #  hostname: nextdns-proxy
+  #  ports:
+  #   - "5053:53/udp"
+  #  environment: # Note, these are ALL optional
+  #    NEXTDNS_CONFIG: "f92325"
+  #    NEXTDNS_FORWARDING_DOMAIN: "localdomain"
+  #    NEXTDNS_FORWARDING_DNSIP: "192.168.11.1"
+  #  restart: unless-stopped
+  #  networks:
+  #    pihole:
+  #      ipv4_address: 172.88.0.2
   cloudflared:
     container_name: cloudflared
     image: visibilityspots/cloudflared
