@@ -1,6 +1,6 @@
 # Pi-hole HA Docker Container
 
-Using keepalived to redirect Pi-hole serivces to secondary Pi-hole instances during maintainance/upgrade.
+Using keepalived to redirect Pi-hole serivces to secondary Pi-hole instances during maintainance/upgrade. Pi-hole container is running on 2 separate docker servers.
 
 ## Checking Pi-hole docker instances
 Script exit code is set depending number of lines returned when checking pihole instances. We expect 2 lines returned with pihole is running
