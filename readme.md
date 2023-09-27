@@ -47,6 +47,10 @@ vrrp_instance VI_1 {
               auth_type PASS
               auth_pass 12345
         }
+        unicast_src_ip 10.188.100.20
+        unicast_peer {
+           10.188.100.21
+        }
         virtual_ipaddress {
               VIP_IP
         }
@@ -80,6 +84,10 @@ vrrp_instance VI_1 {
         authentication {
               auth_type PASS
               auth_pass 12345
+        }
+        unicast_src_ip 10.188.100.21
+        unicast_peer {
+           10.188.100.20
         }
         virtual_ipaddress {
               VIP_IP
