@@ -37,19 +37,15 @@ vrrp_instance VI_1 {
         state MASTER
         interface eth0
         virtual_router_id 53
-        unicast_src_ip PRIMARY_NODE_IP
-        unicast_peer {
-           SECONDARY_NODE_IP
-        }
         priority 200
         advert_int 1
         authentication {
               auth_type PASS
               auth_pass 12345
         }
-        unicast_src_ip 10.188.100.20
+        unicast_src_ip PRIMARY_NODE_IP
         unicast_peer {
-           10.188.100.21
+           SECONDARY_NODE_IP
         }
         virtual_ipaddress {
               VIP_IP
@@ -75,19 +71,15 @@ vrrp_instance VI_1 {
         state BACKUP
         interface eth0
         virtual_router_id 53
-        unicast_src_ip SECONDARY_NODE_IP
-        unicast_peer {
-           PRIMARY_NODE_IP
-        }
         priority 199
         advert_int 1
         authentication {
               auth_type PASS
               auth_pass 12345
         }
-        unicast_src_ip 10.188.100.21
+        unicast_src_ip SECONDARY_NODE_IP
         unicast_peer {
-           10.188.100.20
+           PRIMARY_NODE_IP
         }
         virtual_ipaddress {
               VIP_IP
